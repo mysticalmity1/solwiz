@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0d1b2a;
+    --bg-card: #16273a;
+    --border: #2a4a6a;
+    --text: #c8dff0;
+    --accent: #4a9eda;
+    --danger: #c0392b;
+    --success: #27ae60;
+    --warning: #f39c12;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text)] font-sans;
+  }
+}
+
+@layer components {
+  .heading-font {
+    font-family: "Press Start 2P", monospace;
+  }
+  
+  .glass-card {
+    @apply bg-[var(--bg-card)] border border-[var(--border)] rounded-xl shadow-lg;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--accent)] hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded transition-all duration-200 border border-[var(--border)];
+  }
+
+  .btn-secondary {
+    @apply bg-[var(--bg-card)] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 border border-[var(--border)];
+  }
+}
