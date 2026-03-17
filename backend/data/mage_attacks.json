@@ -1,0 +1,17 @@
+[
+  { "name": "Arcane Bolt", "wizardType": "Mage", "description": "A simple bolt of magical energy.", "damage": 30, "mpCost": 10, "minLevel": 1, "attackType": "arcane", "effect": "none", "effectChance": 0, "cooldown": 0, "emoji": "✨" },
+  { "name": "Fireball", "wizardType": "Mage", "description": "Hurl a ball of searing fire.", "damage": 40, "mpCost": 20, "minLevel": 2, "attackType": "fire", "effect": "burn", "effectChance": 40, "cooldown": 2, "emoji": "🔥" },
+  { "name": "Frost Nova", "wizardType": "Mage", "description": "An icy burst that freezes the air.", "damage": 35, "mpCost": 20, "minLevel": 3, "attackType": "frost", "effect": "slow", "effectChance": 60, "cooldown": 2, "emoji": "❄️" },
+  { "name": "Magic Missile", "wizardType": "Mage", "description": "Unavoidable homing darts of force.", "damage": 45, "mpCost": 25, "minLevel": 4, "attackType": "arcane", "effect": "none", "effectChance": 0, "cooldown": 0, "emoji": "🎯" },
+  { "name": "Scorch", "wizardType": "Mage", "description": "A quick blast of heat.", "damage": 38, "mpCost": 15, "minLevel": 5, "attackType": "fire", "effect": "burn", "effectChance": 20, "cooldown": 0, "emoji": "🧨" },
+  { "name": "Lightning", "wizardType": "Mage", "description": "A stray bolt from the heavens.", "damage": 55, "mpCost": 30, "minLevel": 6, "attackType": "lightning", "effect": "stun", "effectChance": 35, "cooldown": 3, "emoji": "⚡" },
+  { "name": "Ice Lance", "wizardType": "Mage", "description": "A sharp icicle fired at high velocity.", "damage": 60, "mpCost": 30, "minLevel": 7, "attackType": "frost", "effect": "slow", "effectChance": 40, "cooldown": 1, "emoji": "🏹" },
+  { "name": "Blizzard", "wizardType": "Mage", "description": "A raging storm of ice and snow.", "damage": 70, "mpCost": 40, "minLevel": 8, "attackType": "frost", "effect": "slow", "effectChance": 80, "cooldown": 4, "emoji": "🌨️" },
+  { "name": "Chain Lightning", "wizardType": "Mage", "description": "Lightning that dances across the target.", "damage": 75, "mpCost": 45, "minLevel": 9, "attackType": "lightning", "effect": "stun", "effectChance": 45, "cooldown": 3, "emoji": "🌩️" },
+  { "name": "Arcane Surge", "wizardType": "Mage", "description": "A massive wave of pure magical force.", "damage": 95, "mpCost": 55, "minLevel": 10, "attackType": "arcane", "effect": "none", "effectChance": 0, "cooldown": 2, "emoji": "🌀" },
+  { "name": "Inferno", "wizardType": "Mage", "description": "Summon a pillar of ultimate fire.", "damage": 105, "mpCost": 60, "minLevel": 11, "attackType": "fire", "effect": "burn", "effectChance": 70, "cooldown": 5, "emoji": "🌋" },
+  { "name": "Deep Freeze", "wizardType": "Mage", "description": "Flash freeze the opponent in solid ice.", "damage": 85, "mpCost": 50, "minLevel": 12, "attackType": "frost", "effect": "stun", "effectChance": 85, "cooldown": 4, "emoji": "🧊" },
+  { "name": "Meteor Strike", "wizardType": "Mage", "description": "Call down a rock from the cosmos.", "damage": 120, "mpCost": 75, "minLevel": 13, "attackType": "fire", "effect": "stun", "effectChance": 40, "cooldown": 5, "emoji": "☄️" },
+  { "name": "Disintegrate", "wizardType": "Mage", "description": "A focused beam of destructive energy.", "damage": 110, "mpCost": 70, "minLevel": 14, "attackType": "arcane", "effect": "none", "effectChance": 0, "cooldown": 3, "emoji": "⚕️" },
+  { "name": "Supernova", "wizardType": "Mage", "description": "The explosive death of a star.", "damage": 140, "mpCost": 100, "minLevel": 15, "attackType": "fire", "effect": "burn", "effectChance": 100, "cooldown": 6, "emoji": "💥" }
+]
