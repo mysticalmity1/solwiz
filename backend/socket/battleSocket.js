@@ -238,24 +238,25 @@ module.exports = function(io) {
       }
 
       if (disconnectedWallet) {
-        // Find if they are in an active room
-        activeRooms.forEach((room, roomId) => {
-          if (room.state === 'active' && 
+        // Walk all rooms in memory via matchmakingService
+        const { getAllRooms } = require('../services/matchmakingService');
+        const rooms = getAllRooms(); // returns Map or object
+        for (const [roomId, room] of Object.entries(rooms)) {
+          if (room.state === 'active' &&
              (room.player1.walletAddress === disconnectedWallet || room.player2.walletAddress === disconnectedWallet)) {
-            
+
             // Start 60s timeout
             io.to(roomId).emit('opponentDisconnected', { countdown: 60 });
-            
+
             const toId = setTimeout(async () => {
-               // Player did not return. Forfeit.
-               if (activeRooms.has(roomId)) {
-                 const currentRoom = activeRooms.get(roomId);
+               const currentRoom = getRoom(roomId);
+               if (currentRoom && currentRoom.state === 'active') {
                  const winner = currentRoom.player1.walletAddress === disconnectedWallet ? currentRoom.player2.walletAddress : currentRoom.player1.walletAddress;
                  const loser = disconnectedWallet;
                  currentRoom.state = 'finished';
                  currentRoom.winner = winner;
                  currentRoom.loser = loser;
-                 
+
                  io.to(roomId).emit('opponentForfeited', { message: "Opponent forfeited by abandonment." });
                  await handleBattleEnd(roomId, winner, loser, io);
                  disconnectTimeouts.delete(roomId);
@@ -264,7 +265,7 @@ module.exports = function(io) {
 
             disconnectTimeouts.set(roomId, toId);
           }
-        });
+        }
       }
       console.log('Client disconnected:', socket.id);
     });

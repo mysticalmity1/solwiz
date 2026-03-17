@@ -41,11 +41,16 @@ function untrackRoom(roomId) {
   activeRooms.delete(roomId);
 }
 
+function getAllRooms() {
+  return Object.fromEntries(activeRooms);
+}
+
 module.exports = {
   createRoomCode,
   canJoinRoom,
   trackRoom,
   getRoom,
   untrackRoom,
+  getAllRooms,
   activeRooms
 };

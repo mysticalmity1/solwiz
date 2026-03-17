@@ -65,5 +65,11 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/solwizard
     });
   })
   .catch((err) => {
-    console.error("MongoDB connection error:", err);
+    console.error("MongoDB connection error:", err.message);
+    process.exit(1);
   });
+
+process.on('unhandledRejection', (reason) => {
+  console.error('Unhandled Rejection:', reason);
+  process.exit(1);
+});
